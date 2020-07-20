@@ -130,7 +130,7 @@ function ReduxQuerySync({
             }
             lastQueryValues[param] = value
         })
-        const newLocationSearchString = `?${locationParams}`
+        const newLocationSearchString = decodeURIComponent(`?${locationParams}`)
         const oldLocationSearchString = location.search || '?'
 
         // Only update location if anything changed.
